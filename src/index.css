@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+ 
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.user-list {grid-area: sidenav};
+.message-list {grid-area: messages };
+.input-field {grid-area: inputfield};
+.header {grid-area: header}
+
+.chat-app {
+  display: grid;
+  grid-template-areas: "sidenav header"
+                       "sidenav messages"
+                       "sidenav inputfield";
+  
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: 1fr;
+  min-height: 100vh;
+                          
+}
+
+.user-list {
+  padding: 20px;
+  background-color: #e0e0e0;
+}
+
+.user-list li {
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+
+.user-list .presence {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: white;
+  margin-right: 10px;
+}
+
+.header {
+  padding: 20px;
+  border-bottom: 1px solid #e0e0e0;
+  margin-top: 0;
+  font-weight: 400;
+  font-size: 28px;
+  height: 60px;
+}
+
+.message-list {
+  padding: 0 20px;
+}
+
+.message-list {
+  margin-top: 0;
+}
+
+.message-list h4 {
+  margin: 0;
+}
+
+.input-area input {
+  height: 50px;
+}
